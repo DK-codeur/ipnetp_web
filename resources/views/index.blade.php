@@ -113,8 +113,8 @@
                             @foreach ($lastStudents as $lastStudent)
 
                                 <tr>
-                                    <td><img src="{{asset('photo/'.$lastStudent->photo)}}" alt="photo"  height="25"></td>
-                                    <td>{{$lastStudent->name}} {{$lastStudent->prenoms}} </td>
+                                    <td><a href="{{route('students.show', $lastStudent)}}"> <img src="{{asset('photo/'.$lastStudent->photo)}}" alt="photo"  height="25"> </a> </td>
+                                    <td><a href="{{route('students.show', $lastStudent)}}"> {{$lastStudent->name}} {{$lastStudent->prenoms}} </a> </td>
                                     <td>{{$lastStudent->school->name}}</td>
                                     <td>{{$lastStudent->specialite}}</td>
                                     <td>{{$lastStudent->matricule}}</td>

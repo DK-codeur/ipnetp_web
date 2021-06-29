@@ -47,8 +47,8 @@
                             @foreach ($students as $student)
 
                             <tr>
-                                <td><img src="{{asset('photo/'.$student->photo)}}" alt="photo"  height="25"></td>
-                                <td>{{$student->name}} </td>
+                                <td> <a href="{{route('students.show', $student)}}"> <img src="{{asset('photo/'.$student->photo)}}" alt="photo"  height="25"> </a>  </td>
+                                <td> <a href="{{route('students.show', $student)}}"> {{ucfirst($student->name)}} </a> </td>
                                 <td>{{$student->prenoms}} </td>
                                 <td>{{$student->matricule}} </td>
                                 <td>{{$student->school->name}} </td>

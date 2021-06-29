@@ -79,9 +79,9 @@ class StudentController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Students $student)
     {
-        //
+        return view('students.student-profile', compact('student'));
     }
 
     /**
